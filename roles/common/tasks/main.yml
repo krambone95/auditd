@@ -3,7 +3,7 @@
 
 - name: copy auditd file from repo
   copy:
-    src: auditd.rules
+    src: audit.rules
     dest: /etc/audit/rules.d/audit.rules
     register: result
 
