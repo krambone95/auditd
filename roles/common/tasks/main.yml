@@ -6,4 +6,4 @@
     src: audit.rules
     dest: /etc/audit/rules.d/audit.rules
     notify:
-   - restart auditd
+    - restart auditd
