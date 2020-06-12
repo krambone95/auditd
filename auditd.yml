@@ -2,6 +2,7 @@
 # This playbook deploys the whole application stack in this site.
 
 - name: apply auditd rules
+  hosts: all
   gather_facts: no
 
   roles:
