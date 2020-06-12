@@ -5,5 +5,5 @@
   template:
     src: audit.rules
     dest: /etc/audit/rules.d/audit.rules
-    notify:
-    - restart auditd
+  notify:
+  - restart auditd
