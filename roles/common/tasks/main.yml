@@ -2,7 +2,7 @@
 # install auditd
 
 - name: copy auditd file from repo
-  template:
+  copy:
     src: audit.rules
     dest: /etc/audit/rules.d/audit.rules
   notify:
