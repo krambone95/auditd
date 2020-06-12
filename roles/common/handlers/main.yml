@@ -5,3 +5,4 @@
 - name: restart auditd
   shell:
     cmd: service auditd restart
+    warn: false
