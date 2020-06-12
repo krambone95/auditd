@@ -5,8 +5,5 @@
   copy:
     src: audit.rules
     dest: /etc/audit/rules.d/audit.rules
-    register: result
-
-- name: restart auditd if updated
-  service: name=auditd state=reloaded
-  when: result is changed
+    notify:
+   - restart auditd
