@@ -1,10 +1,8 @@
 ---
-- name: copy auditd file from repo
-  copy:
-    src: auditd.rules
-    dest: /etc/audit/rules.d/audit.rules
-    register: result
+# This playbook deploys the whole application stack in this site.
 
-- name: restart auditd if updated
-  service: name=auditd state=reloaded
-  when: result is changed
+- name: apply auditd rules
+  hosts: localhost
+
+  roles:
+    - common
