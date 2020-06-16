@@ -3,7 +3,6 @@
 
 - name: apply auditd rules
   hosts: all
-  gather_facts: no
 
   roles:
     - common
