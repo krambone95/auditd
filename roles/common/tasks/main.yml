@@ -1,9 +1,18 @@
 ---
 # install auditd
 
-- name: copy auditd file from repo
+- name: copy cent6 version
   copy:
-    src: audit.rules
+    src: cent6.audit.rules
     dest: /etc/audit/rules.d/audit.rules
   notify:
   - restart auditd
+  when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6"
+
+- name: copy cent7 version
+  copy:
+    src: cent7.audit.rules
+    dest: /etc/audit/rules.d/audit.rules
+  notify:
+  - restart auditd
+  when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"
