@@ -3,7 +3,7 @@
 
 - name: copy cent6 version
   copy:
-    src: cent6.audit.rules
+    src: cent6.default.audit.rules
     dest: /etc/audit/rules.d/audit.rules
   notify:
   - restart auditd
@@ -11,7 +11,7 @@
 
 - name: copy cent7 version
   copy:
-    src: cent7.audit.rules
+    src: cent7.default.audit.rules
     dest: /etc/audit/rules.d/audit.rules
   notify:
   - restart auditd
