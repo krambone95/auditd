@@ -7,7 +7,9 @@
     dest: /etc/audit/rules.d/audit.rules
   notify:
   - restart auditd
-  when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6"
+  when: 
+    - ansible_distribution == "CentOS"
+    - ansible_distribution_major_version == "6"
 
 - name: copy cent7 version
   copy:
@@ -15,4 +17,6 @@
     dest: /etc/audit/rules.d/audit.rules
   notify:
   - restart auditd
-  when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "7"
+  when:
+    - ansible_distribution == "CentOS"
+    - ansible_distribution_major_version == "7"
