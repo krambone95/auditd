@@ -40,9 +40,10 @@
 # to see if these logs are useful
 -a never,user -F subj_type=crond_t
 
-## This prevents chrony and ntpd from overwhelming the logs
+## This prevents chrony, ntpd, and dcos-checks from spamming logs
 -a never,exit -F arch=b64 -S adjtimex -S settimeofday -F auid=unset -F uid=chrony
 -a never,exit -F arch=b64 -S adjtimex -S settimeofday -F auid=unset -F uid=ntpd
+-a never,exit -F arch=b64 -S adjtimex comm="dcos-checks"
 
 ## VMWare tools
 -a exit,never -F arch=b32 -S fork -F success=0 -F path=/usr/lib/vmware-tools -F subj_type=initrc_t -F exit=-2
