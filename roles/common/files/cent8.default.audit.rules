@@ -137,9 +137,6 @@
 # log bind to ipv4 (lower volume than connect)
 -a always,exit -F arch=b64 -F a0=4 -S bind -F key=net_usage
 
-# log accept ipv6 (ipv6 is not supported. things still bind. alert if connect only)
--a always,exit -F arch=b64 -F a0=3 -F a3!=0 -S accept -F key=ipv6_usage
-
 # log root executions
 -a exit,always -F arch=b64 -F euid=0 -F auid!=4294967295 -S execve -k root-execve
 
