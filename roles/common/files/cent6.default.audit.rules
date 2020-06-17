@@ -43,7 +43,7 @@
 ## This prevents chrony and ntpd from overwhelming the logs
 -a never,exit -F arch=b64 -S adjtimex -S settimeofday -F auid=unset -F uid=chrony
 -a never,exit -F arch=b64 -S adjtimex -S settimeofday -F auid=unset -F uid=ntpd
--a never,exit -F arch=b64 -S adjtimex -S settimeofday -F uid=38
+-a never,exit -F arch=b64 -S adjtimex -S settimeofday -F uid=ntp
 -a never,exit -F arch=b64 -S adjtimex comm=dcos-checks
 
 ## VMWare tools
