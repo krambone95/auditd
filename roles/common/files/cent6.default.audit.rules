@@ -50,9 +50,8 @@
 -a exit,never -F arch=b32 -S fork -F success=0 -F path=/usr/lib/vmware-tools -F subj_type=initrc_t -F exit=-2
 -a exit,never -F arch=b64 -S fork -F success=0 -F path=/usr/lib/vmware-tools -F subj_type=initrc_t -F exit=-2
 
-## Ignore noise comms
--a never, exit -F arch=b64 -S stub_execve -F comm=ldconfig -F auid=unset
-
+## Ignore service accounts
+-a never, exit -F arch=b64 -S execve -F auid=4294967295
 
 ####====-------
 ## Do Audit Rules
