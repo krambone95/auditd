@@ -1,6 +1,11 @@
 ---
 # install auditd
+- name: install auditd
+  package:
+    name: auditd
+    state: present
 
+# copy audit.rules based on criteria
 - name: copy cent6 version
   copy:
     src: cent6.default.audit.rules
