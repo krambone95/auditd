@@ -1,10 +1,5 @@
 ---
 # install auditd
-- name: ensure auditd installed
-  package:
-    name: auditd
-    state: present
-
 - name: ensure auditd running
   service:
     name: auditd
