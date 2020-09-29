@@ -1,7 +1,7 @@
   ---
 # Disable auditd.
 
-- name: Playbook to turn off auditd
+- name: update audtd rules
   hosts: all
 
   roles:
