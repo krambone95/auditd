@@ -1,7 +1,7 @@
 ---
 # This playbook deploys the whole application stack in this site.
 
-- name: Playbook to add squid client settings
+- name: Install auditd
   hosts: all
 
   roles:
