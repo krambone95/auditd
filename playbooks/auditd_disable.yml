@@ -1,9 +1,0 @@
-  ---
-# Disable auditd.
-
-- name: Playbook to turn off auditd
-  hosts: all
-
-  roles:
-  - role: ../roles/common
-    state: absent
