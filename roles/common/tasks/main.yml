@@ -8,3 +8,7 @@
 - name: Uninstall client proxy settings
   include_tasks: uninstall.yml
   when: state == 'absent'
+
+- name: Uninstall client proxy settings
+  include_tasks: update.yml
+  when: state == 'update'
