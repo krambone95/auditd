@@ -1,8 +1,9 @@
 ---
-# This playbook deploys the whole application stack in this site.
+# Wrapper to start auditd
 
-- name: apply auditd rules
+- name: begin auditd management
   hosts: all
 
   roles:
-    - common
+  - role: auditd
+    state: {{ auditd_state }}
