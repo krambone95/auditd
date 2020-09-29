@@ -5,5 +5,5 @@
   hosts: all
 
   roles:
-  - role: auditd
+  - role: roles/auditd
     state: update
