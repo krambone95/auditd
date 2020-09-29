@@ -1,7 +1,7 @@
   ---
 # Disable auditd.
 
-- name: update auditd rules
+- name: Update auditd
   hosts: all
 
   roles:
