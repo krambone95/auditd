@@ -6,4 +6,4 @@
 
   roles:
   - role: auditd
-    state: {{ auditd_state }}
+    state: "{{ auditd_state }}"
